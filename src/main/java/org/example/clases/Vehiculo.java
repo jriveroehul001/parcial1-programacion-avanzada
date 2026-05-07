@@ -1,8 +1,9 @@
 package org.example.clases;
 
 import org.example.interfaces.Calculable;
+import org.example.interfaces.MostrarDatos;
 
-public abstract class Vehiculo implements Calculable {
+public abstract class Vehiculo implements Calculable, MostrarDatos {
 
     private String marca;
     private String modelo;
@@ -28,15 +29,7 @@ public abstract class Vehiculo implements Calculable {
 
     public abstract double calcularCosto();
     public abstract int getEspaciosOcupados();
-    //
-
-    public void mostrarDatos() {
-        System.out.println("Marca: " + marca);
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Patente: " + patente);
-        System.out.println("Horas Estimadas: " + horasEstimadas);
-        System.out.println("Costo Estimado: " + calcularCosto());
-    }
+    public abstract void mostrarDatos();
 
 
 
